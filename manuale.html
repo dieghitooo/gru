@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Manuale d'Uso - Gru Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f2f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .manuale-wrapper {
+            background-color: #ffffff;
+            max-width: 100%;
+            padding: 60px 30px;
+        }
+
+        .manuale {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #004080;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 1.6rem;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #0d6efd;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding-top: 30px;
+            margin-top: 50px;
+        }
+
+        .footer-bottom {
+            background-color: #e9ecef;
+            padding: 10px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="image/logo.png" alt="Logo Gru Project" width="40" height="40" class="d-inline-block align-text-top me-2">
+        </a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="chiSiamo.html">chi siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manuale.html">manuale</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info.html">Informazioni</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="storia.html">storia</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENUTO -->
+<div class="manuale-wrapper">
+    <div class="manuale">
+        <h1>Manuale d'Uso - Gru Elettronica</h1>
+
+        <h2>Come funziona la nostra gru</h2>
+        <p>
+            La gru progettata dal team TVCB è controllata tramite <strong>Arduino</strong> e simulata in <strong>Tinkercad</strong>, una piattaforma gratuita online.
+            La gru può ruotare a destra, a sinistra o fermarsi a comando.
+        </p>
+
+        <h2>Comandi disponibili</h2>
+        <ul>
+            <li><code>R</code> – Ruota a destra</li>
+            <li><code>L</code> – Ruota a sinistra</li>
+            <li><code>S</code> – Ferma il movimento</li>
+        </ul>
+
+        <h2>Come accedere a Tinkercad</h2>
+        <p>
+            Tinkercad è una piattaforma gratuita di Autodesk per simulazioni e progettazione. Non si scarica, ma si usa online.
+            Per usarlo:
+        </p>
+        <ol>
+            <li>Vai al sito <a href="https://www.tinkercad.com/" target="_blank">www.tinkercad.com</a></li>
+            <li>Registrati (o accedi con Google)</li>
+            <li>Clicca su <strong>Circuits</strong> e crea un nuovo progetto</li>
+            <li>Trascina un <strong>Arduino UNO</strong>, un <strong>servo motore</strong> e collega i componenti</li>
+            <li>Scrivi il codice nella sezione “Code” usando blocchi o modalità testo</li>
+        </ol>
+
+        <h2>Come si controlla la gru</h2>
+        <p>
+            Il nostro progetto funziona con un semplice sketch Arduino che legge i comandi da tastiera (seriale) e controlla il servo motore.
+            Una volta avviato il circuito su Tinkercad, puoi aprire il Monitor Seriale e inviare i comandi <code>R</code>, <code>L</code> e <code>S</code> per testare il movimento.
+        </p>
+
+        <h2>Serve il Bluetooth?</h2>
+        <p>
+            Anche se il progetto inizialmente prevedeva il controllo Bluetooth, per motivi tecnici non è stato possibile includerlo.
+            Tuttavia, l'intero sistema è funzionante via USB/Arduino e Tinkercad, ed è perfetto per simulazioni e test.
+        </p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center text-lg-start">
+    <div class="container-fluid p-4">
+        <form>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 mb-3 mb-md-0 text-md-start text-center">
+                    <p class="mb-0"><strong>Iscriviti alla nostra newsletter</strong></p>
+                </div>
+                <div class="col-md-5 mb-3 mb-md-0">
+                    <input type="email" class="form-control" placeholder="Inserisci la tua email" />
+                </div>
+                <div class="col-md-3 text-md-start text-center">
+                    <button type="submit" class="btn btn-primary">Iscriviti</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer-bottom text-center">
+        © 2024 Gru Project - Tutti i diritti riservati.
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

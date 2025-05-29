@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>La Nostra Storia - Gru Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 10px 40px;
+            border-left: 3px solid #0d6efd;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            left: -11px;
+            top: 5px;
+            background-color: #0d6efd;
+        }
+
+        .timeline-item h5 {
+            margin-top: 0;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .timeline-item p {
+            margin-bottom: 5px;
+        }
+
+        .timeline-img {
+            width: 100%;
+            max-height: 300px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="image/logo.png" alt="Logo Gru Project" width="40" height="40" class="d-inline-block align-text-top me-2">
+        </a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="chiSiamo.html">chi siamo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manuale.html">manuale</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info.html">Informazioni</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="storia.html">storia</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h2 class="mt-5 text-center text-primary">La Nostra Storia</h2>
+    <p class="text-center mb-5">Un viaggio passo dopo passo nella creazione del nostro progetto: dalla prima idea alla realizzazione finale.</p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h5>🔍 L'Idea Iniziale</h5>
+            <p>Tutto è cominciato con l’idea di realizzare una gru funzionante in miniatura, utile per simulazioni nei cantieri o anche come giocattolo educativo.</p>
+            <p>Abbiamo pensato di utilizzare Arduino e componenti stampati in 3D.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h5>🖨️ Progettazione 3D e Stampa</h5>
+            <p>Utilizzando Tinkercad abbiamo progettato i componenti della gru, che poi abbiamo stampato in 3D. Questo passaggio è stato fondamentale per testare le dimensioni e l'incastro dei pezzi.</p>
+            < <img src="image/stampaGru.jpg" class="timeline-img">
+        </div>
+
+        <div class="timeline-item">
+            <h5>🔧 Montaggio e Arduino</h5>
+            <p>Dopo aver stampato tutti i pezzi, abbiamo iniziato il montaggio. Abbiamo collegato la gru a un servomotore e sviluppato il codice per i comandi via Arduino.</p>
+            <p>Comandi usati: <strong>R</strong> per ruotare a destra, <strong>L</strong> per sinistra, <strong>S</strong> per fermarsi.</p>
+             <img src="image/arduino.jpg" class="timeline-img">
+        </div>
+
+        <div class="timeline-item">
+            <h5>🖥️ Sviluppo del Sito Web</h5>
+            <p>Abbiamo creato un sito web in HTML, CSS, PHP e Bootstrap. La parte più complessa è stata la gestione del login e della registrazione, collegata al database con XAMPP.</p>
+            <p>Il sito è stato strutturato con homepage, "Chi siamo", "Informazioni", e un manuale utente.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h5>📄 Manuale Utente e Conclusione</h5>
+            <p>Per rendere il progetto completo, abbiamo redatto un manuale utente in PDF, spiegando passo dopo passo il montaggio e l’utilizzo della gru con Arduino.</p>
+            <p>Il progetto si è concluso con soddisfazione: unendo elettronica, stampa 3D e sviluppo web, abbiamo realizzato un’idea concreta e funzionante.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+        <form>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <p class="mb-0"><strong>Iscriviti alla nostra newsletter</strong></p>
+                </div>
+                <div class="col-md-5">
+                    <input type="email" class="form-control" placeholder="Inserisci la tua email" />
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary">Iscriviti</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="text-center p-3 bg-body-secondary">
+        © 2024 Gru Project - Tutti i diritti riservati.
+    </div>
+</footer>
+
+</body>
+</html>
